@@ -11,8 +11,8 @@ import React, {useEffect, useReducer, useState} from "react";
 //useReducer를 사용 할 때에는 액션에 대한 타입스크립트 타입들을 모두 준비해서 | 문자를 사용하여 결합
 type Action = {type : 'INCREASE'} | {type : 'DECREASE'};
 
-export const reducer = (state : number | undefined, action : Action): number => {
-    switch (action.type || state != undefined){
+export const reducer = (state : number , action : Action): number => {
+    switch (action.type){
         case 'INCREASE':
             return state + 1;
         case 'DECREASE':

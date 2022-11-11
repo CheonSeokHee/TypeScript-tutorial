@@ -10,13 +10,13 @@ import {reducer} from "./Counter";
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-const store = createStore(reducer);
+//const store = createStore(reducer);
 
 root.render(
   // <React.StrictMode>
-    <Provider store={store}>
+  //   <Provider store={store}>
         <App />
-    </Provider>
+//    </Provider>
   // </React.StrictMode>
 );
 
