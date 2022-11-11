@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useReducer} from 'react';
 import './App.css';
 import Greetings from "./Greetings";
-import Counter from "./Counter";
+import Counter, {reducer} from "./Counter";
 import MyForm from "./MyForm";
 
 function App() {
+
   const onClick = (name:string) => {
     alert(name + ' hello');
   }
