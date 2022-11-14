@@ -30,7 +30,7 @@ npm manifest:
   {
     "name": "ts-practice",
     "version": "1.0.0",
-    "main": "index.js",
+    "main": "index.tsx",
     "license": "MIT",
     "dependencies": {
       "ts-node": "^10.9.1",

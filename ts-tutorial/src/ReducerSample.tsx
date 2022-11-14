@@ -21,7 +21,7 @@ function reducer(state: State, action: Action): State {
         case 'SET_COUNT':
             return {
                 ...state,
-                count : action.count
+                count : state.count + action.count
             };
         case 'SET_TEXT':
             return {
