@@ -3,6 +3,7 @@ import './App.css';
 import Greetings from "./Greetings";
 import Counter, {reducer} from "./Counter";
 import MyForm from "./MyForm";
+import ReducerSample from "./ReducerSample";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <div>
               <MyForm onSubmit={onSubmit}  />
           </div>
+          <ReducerSample/>
       </>
 
   );

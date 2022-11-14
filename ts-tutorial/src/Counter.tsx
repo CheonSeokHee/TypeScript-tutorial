@@ -8,6 +8,7 @@ import React, {useEffect, useReducer, useState} from "react";
 // type Todo = {id: number, name:string, done : boolean};
 // const [todo, setTodo] = useState<Todo[]>([]);
 
+
 //useReducer를 사용 할 때에는 액션에 대한 타입스크립트 타입들을 모두 준비해서 | 문자를 사용하여 결합
 type Action = {type : 'INCREASE'} | {type : 'DECREASE'};
 
@@ -18,7 +19,7 @@ export const reducer = (state : number , action : Action): number => {
         case 'DECREASE':
             return state - 1;
         default :
-            return state;
+            throw new Error('action error');
     }
 }
 function Counter() {

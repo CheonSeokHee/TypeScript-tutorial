@@ -14,4 +14,27 @@ export const decrease = () => ({
     type: DECREASE
 });
 
-export const increaseBy = ()
+//액션이 부가적으로 필요한 값을 payload 라는 이름으로 사용
+//FSA 규칙임
+export const increaseBy = (value : number) => ({
+    type : INCREASE_BY,
+    payload : value
+});
+
+//모든 액션 객체들에 대한 타입 준비
+// ReturnType<typeof _____> 는 특정 함수의 반환값을 추론해줍니다
+//상단부에서 액션타입을 선언 할 떄 as const 를 하지 않으면 이 부분이 제대로 작동하지 않는다.
+type CounterAction = | ReturnType<typeof increase>
+                     | ReturnType<typeof decrease>
+                     | ReturnType<typeof increaseBy>;
+
+//리덕스에서 관리할 상태 타입 선언
+type CounterState = {
+    count : number;
+}
+//초기상태 선언
+const initialState : CounterState = {
+    count : 0
+}
+
+
