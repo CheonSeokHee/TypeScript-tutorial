@@ -39,7 +39,7 @@ type CounterState = {
     count : number;
 }
 //초기상태 선언
-const initialState : CounterState = {
+const initialState = {
     count : 0
 }
 
